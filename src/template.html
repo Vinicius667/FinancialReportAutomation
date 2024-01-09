@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>EUREX</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+$BEGIN_COMPLETE_REPORT$
+
+<body>
+	<main>
+		<div class="header">
+			<div class="text_and_date">
+				<div class="big_small_text">
+					<div class="bigger_text">
+						$TITLE$
+					</div>
+					<div class="smaller_text">
+						based on data from EUREX <br>
+						(http://www.eurexchange.com/exchange-de/disclaimer)
+					</div>
+				</div>
+				<div class="date">
+					$DATE$
+				</div>
+			</div>
+			<div class="days_delta">
+				<div class="days">
+					<div class="days_text">Days until expiration</div>
+					<div class="days_value">$TBF$</div>
+				</div>
+				<div class="delta">
+					<div class="delta_text">Delta</div>
+					<div class="delta_value">$DELTA$</div>
+				</div>
+			</div>
+			<div class="big_small_text" id="future">
+				<div class="bigger_text">
+					Future hedge needs for options overhangs
+				</div>
+				<div class="smaller_text">
+					(Overhang/5)*delta
+				</div>
+			</div>
+			<div class="graph_header">
+				<div class="front_date"> Front: $FRONT_DATE$</div>
+				<div class="hedge_info"> Change in the hedge requirement for the
+					Front month (contracts/P, estimate)
+					Factor: 50% (of the theoretical value)
+				</div>
+			</div>
+		</div>
+		<div class="data_images">
+			<div class="table_bar">
+				<div class="svg_image">
+					<img src="image_table.svg" style="height: 800px">
+				</div>
+				<div class="svg_image2">
+					<img src="image_bar.svg" style="height: 800px">
+				</div>
+			</div>
+			<div class="svg_image3">
+				<img src="image_graph.svg" style="height: 813px">
+			</div>
+		</div>
+		<div class="bellow_image">
+			<div class="legend_info_name">
+				<div class="legend_info">
+					<div class="legend">
+						<div class="legend0">
+							<div class="yellow_block"></div>
+							<div class="große"> Balanced options position</div>
+						</div>
+						<div class="legend1">
+							<div class="gamma" id="gamma_long">Gamma long (Put long Overhangs)</div>
+							<div class="gamma" id="gamma_short">Gamma short (Call short Overhangs)</div>
+						</div>
+						<div class="legend2">
+							<div class="sum_contracts">
+								<div class="sum">$PUT_SUM$ <br>Put</div>
+								<div class="sum">$CALL_SUM$<br>Call</div>
+							</div>
+							<div class="legend_sum">
+								Total options contracts
+							</div>
+						</div>
+					</div>
+					<div class="info">
+						* Only front month considered for the current and last trading day
+					</div>
+				</div>
+				<div class="name">
+					<br>
+					© John Doe
+				</div>
+			</div>
+		</div>
+		$END_COMPLETE_REPORT$
+		$BEGIN_BASIC$
+		<div class="header">
+			<div class="text_and_date">
+				<div class="big_small_text">
+					<div class="bigger_text">
+						$TITLE$
+					</div>
+					<div class="smaller_text">
+						based on data from EUREX <br>
+						(http://www.eurexchange.com/exchange-de/disclaimer)
+					</div>
+				</div>
+				<div class="date">
+					$DATE$
+				</div>
+			</div>
+			<div class="days_delta">
+				<div class="days">
+					<div class="days_text">Days until expiration</div>
+					<div class="days_value">$TBF$</div>
+				</div>
+				<div class="delta">
+					<div class="delta_text">Delta</div>
+					<div class="delta_value">$DELTA$</div>
+				</div>
+			</div>
+			<div class="big_small_text" id="future">
+				<div class="bigger_text">
+					Future hedge needs for options overhangs
+				</div>
+				<div class="smaller_text">
+					(Overhang/5)*delta
+				</div>
+			</div>
+			<div class="graph_header">
+				<div class="front_date"> Front: $FRONT_DATE$</div>
+				<div class="hedge_info"> Change in the hedge requirement for the
+					Front month (contracts/P, estimate)
+					Factor: 50% (of the theoretical value)
+				</div>
+			</div>
+		</div>
+		<div class="data_images">
+			<div class="table_bar">
+				<div class="svg_image">
+					<img src="image_table_basic.svg" style="height: 800px">
+				</div>
+				<div class="svg_image2">
+					<img src="image_bar_basic.svg" style="height: 800px">
+				</div>
+			</div>
+			<div class="svg_image3">
+				<img src="image_graph_basic.svg" style="height: 813px">
+			</div>
+		</div>
+		<div class="bellow_image">
+			<div class="legend_info_name">
+				<div class="legend_info">
+					<div class="legend">
+						<div class="legend1_expiry">
+							<div class="gamma_expiry" id="gamma_long">Gamma long (Put long Overhangs)</div>
+							<div class="gamma_expiry" id="gamma_short">Gamma short (Call short Overhangs)</div>
+						</div>
+					</div>
+					<div class="info">
+						* Only front month considered for the current and last trading day
+					</div>
+				</div>
+				<div class="name">
+					<br>
+					© John Doe
+				</div>
+			</div>
+		</div>
+		$END_BASIC$
+		$BEGIN_DETAIL$
+		<div class="header">
+			<div class="text_and_date">
+				<div class="big_small_text">
+					<div class="bigger_text">
+						$TITLE$
+					</div>
+					<div class="smaller_text">
+						based on data from EUREX <br>
+						(http://www.eurexchange.com/exchange-de/disclaimer)
+					</div>
+				</div>
+				<div class="date">
+					$DATE$
+				</div>
+			</div>
+			<div class="days_delta">
+				<div class="days">
+					<div class="days_text">Days until expiration</div>
+					<div class="days_value">$TBF$</div>
+				</div>
+				<div class="delta">
+					<div class="delta_text">Delta</div>
+					<div class="delta_value">$DELTA$</div>
+				</div>
+			</div>
+			<div class="big_small_text" id="future">
+				<div class="bigger_text">
+					Future hedge needs for options overhangs
+				</div>
+				<div class="smaller_text">
+					(Overhang/5)*delta
+				</div>
+			</div>
+			<div class="graph_header">
+				<div class="front_date"> Front: $FRONT_DATE$</div>
+				<div class="hedge_info"> Change in the hedge requirement for the
+					Front month (contracts/P, estimate)
+					Factor: 50% (of the theoretical value)
+				</div>
+			</div>
+		</div>
+		<div class="data_images">
+			<div class="table_bar">
+				<div class="svg_image">
+					<img src="image_table_expiry.svg" style="height: 800px">
+				</div>
+				<div class="svg_image2">
+					<img src="image_bar_expiry.svg" style="height: 800px">
+				</div>
+			</div>
+			<div class="svg_image3">
+				<img src="image_graph_expiry.svg" style="height: 813px">
+			</div>
+		</div>
+		<div class="bellow_image">
+			<div class="legend_info_name">
+				<div class="legend_info">
+					<div class="legend">
+						<div class="legend1_expiry">
+							<div class="gamma_expiry" id="gamma_long">Gamma long (Put long Overhangs)</div>
+							<div class="gamma_expiry" id="gamma_short">Gamma short (Call short Overhangs)</div>
+						</div>
+					</div>
+					<div class="info">
+						* Only front month considered for the current and last trading day
+					</div>
+				</div>
+				<div class="name">
+					<br>
+					© John Doe
+				</div>
+			</div>
+		</div>
+		$END_DETAIL$
+		$BEGIN_AFTER_REPORT$
+		<div id="disclaimer" style="font-size: larger; text-align: center;">
+			Disclaimer <br>
+			This document has been carefully prepared to the best of our knowledge and belief and represents the<br>
+			represents the author's personal opinion and does not constitute investment advice.<br>
+			All statements in this document are for information and learning purposes.<br>
+			Accuracy and completeness are based on published data. For the<br>
+			The correctness, accuracy, completeness and punctuality of this document will be guaranteed
+			no liability accepted. This document in no way constitutes a request<br>
+			for trading. No guarantee can be given that you will be able to use these<br>
+			Content can make profits or reduce losses. Liability is<br>
+			excluded.<br>
+
+			Trading on the financial markets involves the risk of total loss, possibly<br>
+			beyond the capital employed. Trading decisions are made by traders<br>
+			self-responsible. Any liability or responsibility is declined.<br>
+			By using this document you are deemed to have accepted this disclaimer.<br>
+		</div>
+
+		<div style="font-size: 20px; text-align: center; margin-bottom: 20px;">Glossary</div>
+		<div class="glossar">
+			<div class="term">
+				Expiration:
+			</div>
+
+			<div class="definition">
+				The expiration date for the DAX and STOXX options is the 3rd Friday of each month
+			</div>
+		</div>
+
+		<div class="glossar">
+			<div class="term">
+				Days until expiration:
+			</div>
+
+			<div class="definition">
+				Days until the expiry date including weekends and public holidays
+			</div>
+		</div>
+
+		<div class="glossar">
+			<div class="term">
+				Delta
+			</div>
+
+			<div class="definition">
+				Change in the option price if the strike price changes by 1. <br>
+				The delta is also used to estimate the probability of exercise: <br>
+				Delta = 0.5 => 50% probability that the option can be exercised with a profit on the expiry date. <br>
+			</div>
+		</div>
+
+		<div class="glossar">
+			<div class="term">
+				Future Delta Hedge
+			</div>
+
+			<div class="definition">
+				Hedge the strike prices in the future to be delta neutral
+			</div>
+		</div>
+
+		</div>
+		</div>
+		<div class="glossar">
+			<div class="term">
+				Gamma
+			</div>
+
+			<div class="definition">
+				Change in delta when the strike price changes by 1, accelerating the price change.
+			</div>
+		</div>
+		$END_AFTER_REPORT$
+	</main>
+</body>
+
+</html>

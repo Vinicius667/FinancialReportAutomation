@@ -1,0 +1,393 @@
+/* -- Set printing size as A4 */
+
+@page{
+    size: A4; 
+    margin: 1cm;
+}
+
+/* By default, all elements will have this configuration */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    }
+
+    
+/* Set page size as A4  793* 1122*/
+body{
+    width: 210mm;
+    height: 297mm;
+
+}
+
+/* Main should ocuppy the whole page*/
+main{
+    width: 100%;
+    height: 100%;    
+    margin-top: 0%;
+
+}
+
+
+main > *{
+    width: 100%;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    justify-content: space-between;
+    $HEADER_COLOR$
+    $FONT_COLOR$
+}
+
+
+.header > *{
+    width: 100%;
+    $HEADER_COLOR$
+}
+.text_and_date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#future{
+    $FUTURE_COLOR$
+}
+
+.date{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.big_small_text{
+    text-align: center;
+    box-sizing: border-box;
+    border: 10px;
+}
+
+.smaller_text{
+    font-size: 14px;
+}
+
+.bigger_text{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+
+.days_delta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    
+}
+
+.days{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.delta{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.days_text{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.days_value{
+    display: flex;
+    color: black;
+    background-color: cadetblue;
+    
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.delta_text{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.delta_value{
+    display: flex;
+    background-color: powderblue;
+    color: black;
+    width: 15%;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.svg_image{
+    display: flex;
+    justify-content: center;
+}
+
+.future{
+    background-color: rgb(103, 151, 240);
+}
+
+.disclaimer{
+    text-align: center;
+    font-size: 11px;
+}
+
+.bellow_image{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    page-break-after: always;
+
+}
+
+.legend_info_name{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.legend_info{
+    width: 419.5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.legend{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    border: 1px solid black;
+
+}
+
+
+.legend0{
+    display: flex;
+    width: 33.5%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.große{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* This is used in .legend0*/
+.yellow_block{
+    height: 25%;
+    width: 30%;
+    background-color: yellow;
+}
+
+
+.legend1{
+    display: flex;
+    width: 33.5%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 10px;
+
+}
+
+.legend2{
+    display: flex;
+    width: 32%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+.legend_sum{
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sum_contracts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gamma{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+#gamma_short{
+    background-color: rgb(77, 166, 255);
+
+}
+
+#gamma_long{
+    background-color: rgb(0, 204, 204);
+
+}
+
+.name{
+    flex-grow: 1;
+    text-align: center;    
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+.data_images{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 813px;
+}
+
+.data_images > *{
+    height: 813px;
+}
+
+.table_bar{
+    display: flex;
+    flex-direction: row;
+}
+
+.graph_header{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+
+.front_date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 419px;
+    text-align: center;
+    font-size: 24px;
+
+}
+
+.hedge_info{
+    height: 50px;
+    width: 375px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid black;
+}
+
+.sum {
+    text-align: center;
+}
+
+
+.legend1_expiry{
+    width: 100%;;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gamma_expiry{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#preise{
+    page-break-after: always;
+}
+
+#disclaimer{
+    page-break-after: always;
+}
+
+.glossar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.term{
+    width: 40%;
+    text-align: left;
+    font-weight: 600;
+}
+
+.definition{
+    width: 80%;
+    text-align: left;
+}

@@ -1,0 +1,47 @@
+{
+    "emails": [
+        {
+            "from": "my_email_1@gmail.com",
+            "mailto": [
+                "anna_email.@gmail.com",
+                "my_email_1@gmail.com"
+            ],
+            "subject": "OI-Tabelle",
+            "text": [
+                "anna.txt",
+                "automated_msg.txt"
+            ],
+            "condition": "always",
+            "id": 1,
+            "index": "DAX"
+        },
+        {
+            "from": "my_email_1@gmail.com",
+            "mailto": [
+                "philip_email@outlook.com",
+                "my_email_1@gmail.com"
+            ],
+            "subject": "OI-Tabelle",
+            "text": [
+                "philip.txt"
+            ],
+            "condition": "always",
+            "id": 2,
+            "index": "STOXX"
+        },
+        {
+            "from": "my_email_1@gmail.com",
+            "mailto": [
+                "charles_email@outlook.com",
+                "my_email_1@gmail.com"
+            ],
+            "subject": "OI-Tabelle",
+            "text": [
+                "charles.txt"
+            ],
+            "condition": "days_until_expiry<=5",
+            "id": 3,
+            "index": "DAX"
+        }
+    ]
+}
